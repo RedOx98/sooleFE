@@ -1,0 +1,65 @@
+/* Ensure body does not scroll when modal is open */
+/* body.active-modal {
+    overflow-y: hidden;
+} */
+
+/* Modal content */
+#cpt .modal-content {
+  /* position: relative; */
+  /* overflow-y: auto; */
+  /* Enable scrolling if content exceeds modal size */
+  background: #f1f1f1;
+  /* padding: 20px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  #cpt .modal-content {
+    /* max-width: 100%;
+    max-height: 100%;
+    margin: 0 10px;
+    position: relative;
+    background: #f1f1f1;
+    padding: 20px; */
+  }
+}
+
+.slide-in-fwd-center {
+  -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  box-shadow: 7px 7px 5px 0px rgba(64, 60, 60, 0.34);
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(64, 60, 60, 0.34);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(64, 60, 60, 0.34);
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
